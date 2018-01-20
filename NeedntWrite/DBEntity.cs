@@ -30,7 +30,7 @@ using System.Threading.Tasks;
 using Chloe.Entity;
 
 namespace NeedntWrite
-{
+{ 
     
         
         public class Item_Info
@@ -49,8 +49,20 @@ namespace NeedntWrite
             public string NotMappedProperty { get; set; }
         }
 
+    public class Item_Price_Info
+    {
+        public int itemId { get; set; }
+        public string itemName { get; set; }
+        public float itemPrice { get; set; }
+        public string itemSize { get; set; }
+        public int itemNum { get; set; }
+        public float itemAllPrice { get; set; }
 
-class DBEntity
+    }
+
+
+
+    class DBEntity
 {
 }
 }
