@@ -38,7 +38,7 @@ namespace NeedntWrite
         [ColumnAttribute("DEC_ITEM_ID", IsPrimaryKey = true)]
             public int DEC_ITEM_ID { get; set; }
             public string CHR_ITEM_NAME { get; set; }
-            public float REL_ITEM_PRICE { get; set; }
+            public double REL_ITEM_PRICE { get; set; }
             public string CHR_ITEM_SIZE { get; set; }
             public int IS_DELETE { get; set; }
             public string CHR_CRE_TIME { get; set; }
@@ -53,10 +53,10 @@ namespace NeedntWrite
     {
         public int itemId { get; set; }
         public string itemName { get; set; }
-        public float itemPrice { get; set; }
+        public double itemPrice { get; set; }
         public string itemSize { get; set; }
         public int itemNum { get; set; }
-        public float itemAllPrice { get; set; }
+        public double itemAllPrice { get; set; }
 
     }
 

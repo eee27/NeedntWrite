@@ -19,6 +19,8 @@ namespace NeedntWrite
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Form1 lForm1 = (Form1)this.Owner;//把Form2的父窗口指针赋给lForm1
+            lForm1.ReturnValue = 0;
             Close();
         }
 

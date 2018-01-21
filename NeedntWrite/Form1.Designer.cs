@@ -74,9 +74,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.skinDataGridView3 = new CCWin.SkinControl.SkinDataGridView();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView2)).BeginInit();
@@ -101,6 +103,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.ItemSize = new System.Drawing.Size(60, 22);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -255,10 +258,10 @@
             this.skinDataGridView2.TitleBack = null;
             this.skinDataGridView2.TitleBackColorBegin = System.Drawing.Color.LightGray;
             this.skinDataGridView2.TitleBackColorEnd = System.Drawing.Color.Silver;
-            this.skinDataGridView2.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.skinDataGridView2_UserAddedRow);
             // 
             // ID
             // 
+            this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
@@ -395,6 +398,7 @@
             // 
             // Column9
             // 
+            this.Column9.DataPropertyName = "ID";
             this.Column9.HeaderText = "ID";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
@@ -480,33 +484,37 @@
             this.button9.TabIndex = 9;
             this.button9.Text = "查找";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(493, 191);
+            this.button8.Location = new System.Drawing.Point(766, 201);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 25);
             this.button8.TabIndex = 8;
             this.button8.Text = "删除";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(493, 151);
+            this.button3.Location = new System.Drawing.Point(766, 161);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 25);
             this.button3.TabIndex = 7;
             this.button3.Text = "添加";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(493, 111);
+            this.button2.Location = new System.Drawing.Point(766, 121);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 25);
             this.button2.TabIndex = 6;
             this.button2.Text = "编辑";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // skinDataGridView3
             // 
@@ -530,9 +538,11 @@
             this.skinDataGridView3.ColumnHeadersHeight = 30;
             this.skinDataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.skinDataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column4,
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
+            this.dataGridViewTextBoxColumn3,
+            this.Column5});
             this.skinDataGridView3.ColumnSelectBackColor = System.Drawing.SystemColors.ButtonShadow;
             this.skinDataGridView3.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -563,12 +573,20 @@
             this.skinDataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.skinDataGridView3.RowTemplate.Height = 23;
             this.skinDataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.skinDataGridView3.Size = new System.Drawing.Size(367, 474);
+            this.skinDataGridView3.Size = new System.Drawing.Size(684, 474);
             this.skinDataGridView3.SkinGridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.skinDataGridView3.TabIndex = 3;
             this.skinDataGridView3.TitleBack = null;
             this.skinDataGridView3.TitleBackColorBegin = System.Drawing.Color.LightGray;
             this.skinDataGridView3.TitleBackColorEnd = System.Drawing.Color.Silver;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "ID";
+            this.Column4.HeaderText = "ID";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -597,6 +615,15 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 70;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "添加时间";
+            this.Column5.FillWeight = 200F;
+            this.Column5.HeaderText = "添加时间";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 200;
             // 
             // Form1
             // 
@@ -641,9 +668,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private CCWin.SkinControl.SkinDataGridView skinDataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button9;
@@ -659,6 +683,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 单价;
         private System.Windows.Forms.DataGridViewTextBoxColumn 数量;
         private System.Windows.Forms.DataGridViewTextBoxColumn 总价;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }
 
